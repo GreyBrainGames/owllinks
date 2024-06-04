@@ -7,7 +7,7 @@ export function setupContextMenu() {
     icons: [
       {
         icon: "/img/add.svg",
-        label: "Add Sheet from Beyond",
+        label: "Add Sheet",
         filter: {
           roles: ["GM"],
           every: [
@@ -18,7 +18,7 @@ export function setupContextMenu() {
       },
       {
         icon: "/img/remove.svg",
-        label: "Remove Sheet from Beyond",
+        label: "Remove Sheet",
         filter: {
           roles: ["GM"],
           every: [{ key: "layer", value: "CHARACTER" }],
@@ -65,7 +65,7 @@ export function setupContextMenu() {
     icons: [
       {
         icon: "/img/view.svg",
-        label: "View Sheet from Beyond",
+        label: "View Sheet",
         filter: {
           roles: ["GM", "PLAYER"],
           every: [

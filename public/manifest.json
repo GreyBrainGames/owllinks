@@ -5,7 +5,7 @@
   "author": "Alvaro Cavalcanti",
   "action": {
     "title": "Sheet from Beyond",
-    "icon": "/icon.svg",
+    "icon": "/img/icon.svg",
     "popover": "/",
     "height": 600,
     "width": 400
