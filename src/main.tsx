@@ -5,6 +5,8 @@ import App from "./components/App.tsx";
 import Homepage from "./components/Homepage.tsx";
 import PluginGate from "./components/PluginGate.tsx";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export const ID = "es.memorablenaton.sheet-from-beyond";
 
 const urlParams = new URLSearchParams(window.location.search);
