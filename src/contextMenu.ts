@@ -67,7 +67,7 @@ export function setupContextMenu() {
         icon: "/img/view.svg",
         label: "View Sheet from Beyond",
         filter: {
-          roles: ["GM"],
+          roles: ["GM", "PLAYER"],
           every: [
             { key: "layer", value: "CHARACTER" },
             { key: ["metadata", `${ID}/metadata`], value: undefined, operator: "!="},
@@ -82,7 +82,7 @@ export function setupContextMenu() {
       OBR.popover.open({
         id: `${ID}/popover`,
         url: `${metadata.characterSheetURL}`,
-        height: 800,
+        height: 600,
         width: 400,
         anchorElementId: elementId,
       });
