@@ -4,6 +4,6 @@
   "manifest_version": 1,
   "author": "Alvaro Cavalcanti",
   "icon": "/img/icon.svg",
-  "description": "Add URLs to external character sheets and see them in a POPUP",
+  "description": "Add URLs to external character sheets and see them in a popup",
   "background_url": "/background.html"
 }
