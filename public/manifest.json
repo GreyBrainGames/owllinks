@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "manifest_version": 1,
   "author": "Alvaro Cavalcanti",
-  "action": {
-    "title": "Sheet from Beyond",
-    "icon": "/img/icon.svg",
-    "popover": "/",
-    "height": 600,
-    "width": 400
-  }
+  "icon": "/img/icon.svg",
+  "description": "Add URLs to external character sheets and see them in a POPUP",
+  "background_url": "/background.html"
 }

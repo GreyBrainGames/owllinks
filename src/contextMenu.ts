@@ -82,7 +82,7 @@ export function setupContextMenu() {
       OBR.popover.open({
         id: `${ID}/popover`,
         url: `${metadata.characterSheetURL}`,
-        height: 600,
+        height: 800,
         width: 400,
         anchorElementId: elementId,
       });
