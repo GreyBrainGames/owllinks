@@ -36,6 +36,10 @@ If you know of any other VTT or Online Character Sheet service that could be add
 - **GM**: Can Add, Remove and View sheets
 - **PLAYER**: Can View sheets. Requires `Character (Update)` in `Player Permissions`
 
+## Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/CS4NznM0qBs/0.jpg)](https://youtu.be/CS4NznM0qBs)
+
 ## Features
 
 All the features below are available in the **context menu** for `CHARACTERS`.
