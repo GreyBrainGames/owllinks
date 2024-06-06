@@ -38,7 +38,7 @@ If you know of any other VTT or Online Character Sheet service that could be add
 
 ## Demo Video
 
-[![Demo Video](https://img.youtube.com/vi/CS4NznM0qBs/0.jpg)](https://www.youtube.com/embed/B15LXUGNEks?si=j1iVUXWo087hL5K_)
+[![Demo Video](https://img.youtube.com/vi/CS4NznM0qBs/0.jpg)](https://www.youtube.com/embed/sc7bEMMFbAs?si=-1pHgmocWBhR8G87)
 
 ## Features
 
