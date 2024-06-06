@@ -22,6 +22,7 @@ You can see below a support table, last updated June 5th, 2024.
 | Demiplane       | Yes | Yes |
 | Alchemy RPG     | No | |
 | Shadowdarklings | No | |
+| Diceweaver | Yes | Yes |
 
 If you know of any other VTT or Online Character Sheet service that could be added to the list above, feel free to create a Pull Request.
 
