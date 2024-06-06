@@ -67,7 +67,7 @@ export function setupContextMenu() {
         icon: "/img/view.svg",
         label: "View Sheet",
         filter: {
-          roles: ["GM"],
+          roles: ["GM", "PLAYER"],
           every: [
             { key: "layer", value: "CHARACTER" },
             { key: ["metadata", `${ID}/metadata`], value: undefined, operator: "!="},

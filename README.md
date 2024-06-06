@@ -31,6 +31,11 @@ If you know of any other VTT or Online Character Sheet service that could be add
 
 (2) PDF display works fine, however it depends on how your browser handles PDF files. If it doesn't have a native reader, it will probably download the file instead.
 
+## Permissions
+
+- **GM**: Can Add, Remove and View sheets
+- **PLAYER**: Can View sheets. Requires `Character (Update)` in `Player Permissions`
+
 ## Features
 
 All the features below are available in the **context menu** for `CHARACTERS`.
