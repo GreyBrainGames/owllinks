@@ -83,10 +83,16 @@ export function setupContextMenu() {
       const metadata: { characterSheetURL: string } = context.items[0].metadata[
         `${ID}/metadata`
       ] as { characterSheetURL: string };
+      const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      const windowWidth = 400;
+      const windowHeight = 800;
+      const left = Math.max(0, (screenWidth - windowWidth) / 2);
+      const top = Math.max(0, (screenHeight - windowHeight) / 2);
       window.open(
         metadata.characterSheetURL,
         "_blank",
-        `left=${100},top=100,width=400,height=800`
+        `left=${left},top=${top},width=${windowWidth},height=${windowHeight}`
       );
     },
   });
