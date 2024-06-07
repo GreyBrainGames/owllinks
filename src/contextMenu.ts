@@ -61,16 +61,20 @@ export function setupContextMenu() {
     },
   });
   OBR.contextMenu.create({
-    id: `${ID}/context-menu-view`,
+    id: `${ID}/context-menu-view-popover`,
     icons: [
       {
         icon: "/img/view.svg",
-        label: "View Sheet",
+        label: "View in popover",
         filter: {
           roles: ["GM", "PLAYER"],
           every: [
             { key: "layer", value: "CHARACTER" },
-            { key: ["metadata", `${ID}/metadata`], value: undefined, operator: "!="},
+            {
+              key: ["metadata", `${ID}/metadata`],
+              value: undefined,
+              operator: "!=",
+            },
           ],
         },
       },
@@ -86,6 +90,36 @@ export function setupContextMenu() {
         width: 400,
         anchorElementId: elementId,
       });
+    },
+  });
+  OBR.contextMenu.create({
+    id: `${ID}/context-menu-view-new-tab`,
+    icons: [
+      {
+        icon: "/img/view.svg",
+        label: "View in new tab",
+        filter: {
+          roles: ["GM", "PLAYER"],
+          every: [
+            { key: "layer", value: "CHARACTER" },
+            {
+              key: ["metadata", `${ID}/metadata`],
+              value: undefined,
+              operator: "!=",
+            },
+          ],
+        },
+      },
+    ],
+    onClick(context) {
+      const metadata: { characterSheetURL: string } = context.items[0].metadata[
+        `${ID}/metadata`
+      ] as { characterSheetURL: string };
+      window.open(
+        metadata.characterSheetURL,
+        "_blank",
+        `left=${100},top=100,width=400,height=800`
+      );
     },
   });
 }
