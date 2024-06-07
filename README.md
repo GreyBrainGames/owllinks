@@ -18,23 +18,20 @@ You can see below a support table, last updated June 5th, 2024.
 | PDF (2)         | Yes | No |
 | Shard           | Yes | Yes |
 | Roll20 (1)      | Yes | Yes |
+| Demiplane       | Yes | No |
+| Box.com PDF     | Yes | No |
+| GDrive PDF      | Yes | No |
+| Dropbox PDF     | Yes | No |
 | Fantasy Grounds | No | |
 | Foundry VTT     | No | |
-| Demiplane       | Yes | Yes |
 | Alchemy RPG     | No | |
 | Shadowdarklings | No | |
-| Diceweaver      | Yes | Yes |
-| Box.com PDF     | Yes | No |
-| GDrive PDF (3)  | No | No |
-| Dropbox PDF (3) | No | No |
 
 If you know of any other VTT or Online Character Sheet service that could be added to the list above, feel free to create a Pull Request.
 
 (1) [How to get the character sheet URL in Roll20](https://app.roll20.net/forum/post/9585776/character-sheet-url). However its availability **depends on your subscription level**.
 
 (2) PDF display works fine, however it depends on how your browser handles PDF files. If it doesn't have a native reader, it will probably download the file instead.
-
-(3) Due to security concerns these websites don't load content to be loaded inside another site. You need to open the URL on a different tab
 
 ## Permissions
 
