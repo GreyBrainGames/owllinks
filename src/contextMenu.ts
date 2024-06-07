@@ -61,38 +61,6 @@ export function setupContextMenu() {
     },
   });
   OBR.contextMenu.create({
-    id: `${ID}/context-menu-view-popover`,
-    icons: [
-      {
-        icon: "/img/view.svg",
-        label: "View in popover",
-        filter: {
-          roles: ["GM", "PLAYER"],
-          every: [
-            { key: "layer", value: "CHARACTER" },
-            {
-              key: ["metadata", `${ID}/metadata`],
-              value: undefined,
-              operator: "!=",
-            },
-          ],
-        },
-      },
-    ],
-    onClick(context, elementId) {
-      const metadata: { characterSheetURL: string } = context.items[0].metadata[
-        `${ID}/metadata`
-      ] as { characterSheetURL: string };
-      OBR.popover.open({
-        id: `${ID}/popover`,
-        url: `${metadata.characterSheetURL}`,
-        height: 800,
-        width: 400,
-        anchorElementId: elementId,
-      });
-    },
-  });
-  OBR.contextMenu.create({
     id: `${ID}/context-menu-view-new-tab`,
     icons: [
       {
