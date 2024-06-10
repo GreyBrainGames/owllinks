@@ -2,7 +2,7 @@ import OBR from "@owlbear-rodeo/sdk";
 import React, { useEffect, useState } from "react";
 
 import SceneNotReady from "./SceneNotReady";
-import { Container } from "react-bootstrap";
+import { Badge, Card, Container, Form } from "react-bootstrap";
 import { setupContextMenu } from "../contextMenu";
 import { ID } from "../main";
 import { useLocalStorage } from "@uidotdev/usehooks";
@@ -13,7 +13,10 @@ const setTheme = (theme: string): void => {
 
 const App: React.FC = () => {
   const [sceneReady, setSceneReady] = useState(false);
-  const [isPopoverMode, setIsPopoverMode] = useLocalStorage(`${ID}/popoverMode`, false);
+  const [isPopoverMode, setIsPopoverMode] = useLocalStorage(
+    `${ID}/popoverMode`,
+    false
+  );
 
   useEffect(() => {
     OBR.scene.isReady().then(setSceneReady);
@@ -23,7 +26,7 @@ const App: React.FC = () => {
   useEffect(() => {
     OBR.onReady(() => {
       setupContextMenu();
-    
+
       OBR.theme.getTheme().then((theme) => {
         setTheme(theme.mode.toLowerCase());
       });
@@ -42,28 +45,67 @@ const App: React.FC = () => {
   return sceneReady ? (
     <Container className="mt-3">
       <h1>Settings</h1>
-      <div>
-        <h2>Display Mode</h2>
-        <input
-          type="radio"
-          id="popoverMode"
-          name="displayMode"
-          value="popover"
-          checked={isPopoverMode}
-          onChange={() => handleOnChange(true)}
-        />
-        <label htmlFor="popoverMode">Popover Mode</label>
-        <br />
-        <input
-          type="radio"
-          id="popupMode"
-          name="displayMode"
-          value="popup"
-          checked={!isPopoverMode}
-          onChange={() => handleOnChange(false)}
-        />
-        <label htmlFor="popupMode">Popup Window Mode</label>
-      </div>
+      <Card className="mb-3 text-justify">
+        <Card.Body>
+          <Card.Title>Display Mode</Card.Title>
+          <Card.Text>
+            <Form.Check
+              type="radio"
+              id="popupMode"
+              name="displayMode"
+              value="popup"
+              checked={!isPopoverMode}
+              onChange={() => handleOnChange(false)}
+              label="Popup Window Mode"
+              inline
+            />
+            <Form.Check
+              type="radio"
+              id="popoverMode"
+              name="displayMode"
+              value="popover"
+              checked={isPopoverMode}
+              onChange={() => handleOnChange(true)}
+              label="Popover Mode"
+              inline
+            />
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="mb-3">
+        {/* <Card.Img variant="top" src="../assets/setting-popup-window.png" /> */}
+        <Card.Body>
+          <Card.Title>Popup Window Mode <Badge bg="secondary">Recommended</Badge></Card.Title>
+          <Card.Text>
+            In this mode the character sheet will be displayed in a new browser
+            window. Even though this is less user-friendly, the new window will
+            have access to the current browser session, which means that you
+            won't need to login every time, and also won't have issues with
+            sites blocking the page from being loaded.
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card className="mb-3">
+        {/* <Card.Img variant="top" src="../assets/setting-popover.png" /> */}
+        <Card.Body>
+          <Card.Title>Popover Mode</Card.Title>
+          <Card.Text>
+            In this mode the character sheet will be displayed inside Owlbear
+            Rodeo's scene. Even though the usability is better, it has the
+            following limitations:
+            <br />
+            <br />
+            - It won't have access to the current browser session. Therefore, you
+            will need to accept cookies, login, etc, every time the sheet is
+            displayed
+            <br />
+            <br />
+            - Some sites will block the page from being loaded, such as Google
+            Drive and Dropbox
+            <br />
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </Container>
   ) : (
     <SceneNotReady />
