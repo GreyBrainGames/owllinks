@@ -1,7 +1,14 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { ID } from "./main";
 
+const isPopoverMode = () => {
+  const popoverMode = localStorage.getItem(`${ID}/popoverMode`);
+  return popoverMode === "true";
+};
+
 export function setupContextMenu() {
+  OBR.contextMenu.remove(`${ID}/context-menu-add-remove`);
+  OBR.contextMenu.remove(`${ID}/context-menu-view`);
   OBR.contextMenu.create({
     id: `${ID}/context-menu-add-remove`,
     icons: [
@@ -61,11 +68,11 @@ export function setupContextMenu() {
     },
   });
   OBR.contextMenu.create({
-    id: `${ID}/context-menu-view-new-tab`,
+    id: `${ID}/context-menu-view`,
     icons: [
       {
         icon: "/img/view.svg",
-        label: "View in new tab",
+        label: `View in ${isPopoverMode() ? "Popover" : "New Window"}`,
         filter: {
           roles: ["GM", "PLAYER"],
           every: [
@@ -79,21 +86,37 @@ export function setupContextMenu() {
         },
       },
     ],
-    onClick(context) {
+    onClick(context, elementId) {
       const metadata: { characterSheetURL: string } = context.items[0].metadata[
         `${ID}/metadata`
       ] as { characterSheetURL: string };
-      const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-      const windowWidth = 400;
-      const windowHeight = 800;
-      const left = Math.max(0, (screenWidth - windowWidth) / 2);
-      const top = Math.max(0, (screenHeight - windowHeight) / 2);
-      window.open(
-        metadata.characterSheetURL,
-        "_blank",
-        `left=${left},top=${top},width=${windowWidth},height=${windowHeight}`
-      );
+      if (isPopoverMode()) {
+        OBR.popover.open({
+          id: `${ID}/popover`,
+          url: `${metadata.characterSheetURL}`,
+          height: 800,
+          width: 400,
+          anchorElementId: elementId,
+        });
+      } else {
+        const screenWidth =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        const screenHeight =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+        const windowWidth = 400;
+        const windowHeight = 800;
+        const left = Math.max(0, (screenWidth - windowWidth) / 2);
+        const top = Math.max(0, (screenHeight - windowHeight) / 2);
+        window.open(
+          metadata.characterSheetURL,
+          "_blank",
+          `left=${left},top=${top},width=${windowWidth},height=${windowHeight}`
+        );
+      }
     },
   });
 }
