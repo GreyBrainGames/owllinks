@@ -6,5 +6,11 @@
   "icon": "/img/sheet-icon.svg",
   "homepage_url": "https://github.com/alvarocavalcanti/sheet-from-beyond",
   "description": "Add URLs to external character sheets and see them in a popup",
-  "background_url": "/background.html"
+  "action": {
+    "title": "Sheet from Beyond",
+    "icon": "/img/icon.svg",
+    "popover": "/",
+    "height": 600,
+    "width": 400
+  }
 }

@@ -1,14 +1,8 @@
 import OBR from "@owlbear-rodeo/sdk";
 import { ID } from "./main";
 
-const isPopoverMode = () => {
-  const popoverMode = localStorage.getItem(`${ID}/popoverMode`);
-  return popoverMode === "true";
-};
 
 export function setupContextMenu() {
-  OBR.contextMenu.remove(`${ID}/context-menu-add-remove`);
-  OBR.contextMenu.remove(`${ID}/context-menu-view`);
   OBR.contextMenu.create({
     id: `${ID}/context-menu-add-remove`,
     icons: [
@@ -72,7 +66,7 @@ export function setupContextMenu() {
     icons: [
       {
         icon: "/img/view.svg",
-        label: `View in ${isPopoverMode() ? "Popover" : "New Window"}`,
+        label: `View sheet`,
         filter: {
           roles: ["GM", "PLAYER"],
           every: [
@@ -90,7 +84,7 @@ export function setupContextMenu() {
       const metadata: { characterSheetURL: string } = context.items[0].metadata[
         `${ID}/metadata`
       ] as { characterSheetURL: string };
-      if (isPopoverMode()) {
+      if (localStorage.getItem(`${ID}/popoverMode`) === "true") {
         OBR.popover.open({
           id: `${ID}/popover`,
           url: `${metadata.characterSheetURL}`,
