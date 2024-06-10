@@ -18,6 +18,14 @@ const App: React.FC = () => {
     false
   );
 
+  const [version, setVersion] = useState("unknown")
+  useEffect(() => {
+    fetch("public/manifest.json")
+      .then(b => b.json())
+      .then(j => j.version)
+      .then(setVersion)
+  }, [])
+
   useEffect(() => {
     OBR.scene.isReady().then(setSceneReady);
     return OBR.scene.onReadyChange(setSceneReady);
@@ -106,6 +114,7 @@ const App: React.FC = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+      <em className="text-secondary mb-3">Version: {version}</em>
     </Container>
   ) : (
     <SceneNotReady />
