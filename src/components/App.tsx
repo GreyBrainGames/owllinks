@@ -64,7 +64,7 @@ const App: React.FC = () => {
               value="popup"
               checked={!isPopoverMode}
               onChange={() => handleOnChange(false)}
-              label="Popup Window Mode"
+              label="Popup Window"
               inline
             />
             <Form.Check
@@ -74,7 +74,7 @@ const App: React.FC = () => {
               value="popover"
               checked={isPopoverMode}
               onChange={() => handleOnChange(true)}
-              label="Popover Mode"
+              label="Popover"
               inline
             />
           </Card.Text>
@@ -83,7 +83,7 @@ const App: React.FC = () => {
       <Card className="mb-3">
         {/* <Card.Img variant="top" src="../assets/setting-popup-window.png" /> */}
         <Card.Body>
-          <Card.Title>Popup Window Mode <Badge bg="secondary">Recommended</Badge></Card.Title>
+          <Card.Title>Popup Window <Badge bg="secondary">Recommended</Badge></Card.Title>
           <Card.Text>
             In this mode the character sheet will be displayed in a new browser
             window. Even though this is less user-friendly, the new window will
@@ -96,7 +96,7 @@ const App: React.FC = () => {
       <Card className="mb-3">
         {/* <Card.Img variant="top" src="../assets/setting-popover.png" /> */}
         <Card.Body>
-          <Card.Title>Popover Mode</Card.Title>
+          <Card.Title>Popover</Card.Title>
           <Card.Text>
             In this mode the character sheet will be displayed inside Owlbear
             Rodeo's scene. Even though the usability is better, it has the
