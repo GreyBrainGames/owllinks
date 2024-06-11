@@ -18,13 +18,13 @@ const App: React.FC = () => {
     false
   );
 
-  const [version, setVersion] = useState("unknown")
+  const [version, setVersion] = useState("unknown");
   useEffect(() => {
-    fetch("public/manifest.json")
-      .then(b => b.json())
-      .then(j => j.version)
-      .then(setVersion)
-  }, [])
+    fetch("/manifest.json")
+      .then((b) => b.json())
+      .then((j) => j.version)
+      .then(setVersion);
+  }, []);
 
   useEffect(() => {
     OBR.scene.isReady().then(setSceneReady);
@@ -56,34 +56,34 @@ const App: React.FC = () => {
       <Card className="mb-3 text-justify">
         <Card.Body>
           <Card.Title>Display Mode</Card.Title>
-          <Card.Text>
-            <Form.Check
-              type="radio"
-              id="popupMode"
-              name="displayMode"
-              value="popup"
-              checked={!isPopoverMode}
-              onChange={() => handleOnChange(false)}
-              label="Popup Window"
-              inline
-            />
-            <Form.Check
-              type="radio"
-              id="popoverMode"
-              name="displayMode"
-              value="popover"
-              checked={isPopoverMode}
-              onChange={() => handleOnChange(true)}
-              label="Popover"
-              inline
-            />
-          </Card.Text>
+          <Form.Check
+            type="radio"
+            id="popupMode"
+            name="displayMode"
+            value="popup"
+            checked={!isPopoverMode}
+            onChange={() => handleOnChange(false)}
+            label="Popup Window"
+            inline
+          />
+          <Form.Check
+            type="radio"
+            id="popoverMode"
+            name="displayMode"
+            value="popover"
+            checked={isPopoverMode}
+            onChange={() => handleOnChange(true)}
+            label="Popover"
+            inline
+          />
         </Card.Body>
       </Card>
       <Card className="mb-3">
         {/* <Card.Img variant="top" src="../assets/setting-popup-window.png" /> */}
         <Card.Body>
-          <Card.Title>Popup Window <Badge bg="secondary">Recommended</Badge></Card.Title>
+          <Card.Title>
+            Popup Window <Badge bg="secondary">Recommended</Badge>
+          </Card.Title>
           <Card.Text>
             In this mode the character sheet will be displayed in a new browser
             window. Even though this is less user-friendly, the new window will
@@ -103,8 +103,8 @@ const App: React.FC = () => {
             following limitations:
             <br />
             <br />
-            - It won't have access to the current browser session. Therefore, you
-            will need to accept cookies, login, etc, every time the sheet is
+            - It won't have access to the current browser session. Therefore,
+            you will need to accept cookies, login, etc, every time the sheet is
             displayed
             <br />
             <br />
