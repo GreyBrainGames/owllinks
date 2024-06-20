@@ -5,7 +5,7 @@ author: Alvaro Cavalcanti
 image: https://sheet-from-beyond.vercel.app/img/hero.png
 icon: https://sheet-from-beyond.vercel.app/img/sheet-icon.png
 tags:
-  - sheet
+  - other
 manifest: https://sheet-from-beyond.vercel.app/manifest.json
 learn-more: https://github.com/alvarocavalcanti/sheet-from-beyond
 ---
