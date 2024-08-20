@@ -35,7 +35,6 @@ export function setupContextMenu() {
           "Enter the character's sheet URL:"
         );
         if (!characterSheetURL) {
-          OBR.notification.show("No URL entered", "ERROR");
           return;
         }
 

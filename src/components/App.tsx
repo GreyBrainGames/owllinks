@@ -101,16 +101,21 @@ const App: React.FC = () => {
             In this mode the character sheet will be displayed inside Owlbear
             Rodeo's scene. Even though the usability is better, it has the
             following limitations:
-            <br />
-            <br />
-            - It won't have access to the current browser session. Therefore,
-            you will need to accept cookies, login, etc, every time the sheet is
-            displayed
-            <br />
-            <br />
-            - Some sites will block the page from being loaded, such as Google
-            Drive and Dropbox
-            <br />
+            <ul className="mt-3">
+              <li className="mb-2">
+                It won't have access to the current browser session. Therefore,
+                you will need to accept cookies, login, etc, every time the
+                sheet is displayed
+              </li>
+              <li className="mb-2">
+                For <strong>D&D Beyond</strong>, the best option is to mark the character
+                sheet as public and it should load without needing to login
+              </li>
+              <li className="mb-2">
+                Some sites will block the page from being loaded, such as <strong>Google
+                Drive</strong> and <strong>Dropbox</strong>
+              </li>
+            </ul>
           </Card.Text>
         </Card.Body>
       </Card>
