@@ -12,7 +12,7 @@ learn-more: https://github.com/alvarocavalcanti/sheet-from-beyond
 
 # Sheet from Beyond
 
-![Sheet from Beyond](public/img/hero.png)
+![Sheet from Beyond](https://github.com/alvarocavalcanti/sheet-from-beyond/raw/main/public/img/hero.png)
 
 ## Description
 
@@ -45,14 +45,14 @@ All the features below are available in the **context menu** for `CHARACTERS`.
 
 ### Add Sheet
 
-![Add Sheet](public/img/ss_add_sheet.png)
+![Add Sheet](https://github.com/alvarocavalcanti/sheet-from-beyond/raw/main/public/img/ss_add_sheet.png)
 
 ### Enter Sheet's URL
 
-![Enter URL](public/img/ss_enter_url.png)
+![Enter URL](https://github.com/alvarocavalcanti/sheet-from-beyond/raw/main/public/img/ss_enter_url.png)
 
 ### View Sheet
 
-![View Sheet](public/img/ss_view_sheet.png)
+![View Sheet](https://github.com/alvarocavalcanti/sheet-from-beyond/raw/main/public/img/ss_view_sheet.png)
 
-![Sheet Popover](public/img/ss_sheet_popover.png)
+![Sheet Popover](https://github.com/alvarocavalcanti/sheet-from-beyond/raw/main/public/img/ss_sheet_popover.png)
