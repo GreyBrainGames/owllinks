@@ -3,7 +3,7 @@
   "version": "2024-06-10",
   "manifest_version": 1,
   "author": "Alvaro Cavalcanti",
-  "icon": "/img/icon.svg",
+  "icon": "/img/icon-store.svg",
   "homepage_url": "https://github.com/alvarocavalcanti/sheet-from-beyond",
   "description": "Add URLs to external character sheets and see them in a popup",
   "action": {
