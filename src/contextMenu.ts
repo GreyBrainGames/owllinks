@@ -87,8 +87,8 @@ export function setupContextMenu() {
         OBR.popover.open({
           id: `${ID}/popover`,
           url: `${metadata.characterSheetURL}`,
-          height: 800,
-          width: 400,
+          height: localStorage.getItem(`${ID}/popoverHeight`) as unknown as number,
+          width: localStorage.getItem(`${ID}/popoverWidth`) as unknown as number,
           anchorElementId: elementId,
         });
       } else {

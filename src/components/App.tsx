@@ -17,6 +17,14 @@ const App: React.FC = () => {
     `${ID}/popoverMode`,
     false
   );
+  const [popoverHeight, setPopoverHeight] = useLocalStorage(
+    `${ID}/popoverHeight`,
+    800
+  );
+  const [popoverWidth, setPopoverWidth] = useLocalStorage(
+    `${ID}/popoverWidth`,
+    400
+  );
 
   const [version, setVersion] = useState("unknown");
   useEffect(() => {
@@ -78,6 +86,29 @@ const App: React.FC = () => {
           />
         </Card.Body>
       </Card>
+      {isPopoverMode && (
+        <Card className="mb-3">
+          <Card.Body>
+            <Card.Title>Popover Size</Card.Title>
+            <Form.Group className="mb-3">
+              <Form.Label>Height</Form.Label>
+              <Form.Control
+                type="number"
+                value={popoverHeight}
+                onChange={(e) => setPopoverHeight(parseInt(e.target.value))}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Width</Form.Label>
+              <Form.Control
+                type="number"
+                value={popoverWidth}
+                onChange={(e) => setPopoverWidth(parseInt(e.target.value))}
+              />
+            </Form.Group>
+          </Card.Body>
+        </Card>
+      )}
       <Card className="mb-3">
         {/* <Card.Img variant="top" src="../assets/setting-popup-window.png" /> */}
         <Card.Body>
