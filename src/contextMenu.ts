@@ -7,27 +7,27 @@ export function setupContextMenu() {
     id: `${ID}/context-menu-add-remove`,
     icons: [
       {
-        icon: "/img/add.svg",
-        label: "Add Sheet",
+        icon: "/img/add-link.svg",
+        label: "Add Link",
         filter: {
           roles: ["GM"],
           every: [
             { key: "layer", value: "CHARACTER", coordinator: "||" },
-            { key: "layer", value: "PROPS", coordinator: "||" },
-            { key: "layer", value: "NOTES" },
+            { key: "layer", value: "PROP", coordinator: "||" },
+            { key: "layer", value: "NOTE" },
             { key: ["metadata", `${ID}/metadata`], value: undefined },
           ],
         },
       },
       {
-        icon: "/img/remove.svg",
-        label: "Remove Sheet",
+        icon: "/img/remove-link.svg",
+        label: "Remove Link",
         filter: {
           roles: ["GM"],
           every: [
             { key: "layer", value: "CHARACTER", coordinator: "||" },
-            { key: "layer", value: "PROPS", coordinator: "||" },
-            { key: "layer", value: "NOTES" },
+            { key: "layer", value: "PROP", coordinator: "||" },
+            { key: "layer", value: "NOTE" },
           ],
         },
       },
@@ -37,19 +37,19 @@ export function setupContextMenu() {
         (item) => item.metadata[`${ID}/metadata`] === undefined
       );
       if (add) {
-        const characterSheetURL = window.prompt(
+        const owlLinkURL = window.prompt(
           "Enter the character's sheet URL:"
         );
-        if (!characterSheetURL) {
+        if (!owlLinkURL) {
           return;
         }
 
         try {
-          new URL(characterSheetURL);
+          new URL(owlLinkURL);
           OBR.scene.items.updateItems(context.items, (items) => {
             for (const item of items) {
               item.metadata[`${ID}/metadata`] = {
-                characterSheetURL: characterSheetURL,
+                owlLinkURL: owlLinkURL,
               };
             }
           });
@@ -70,14 +70,14 @@ export function setupContextMenu() {
     id: `${ID}/context-menu-view`,
     icons: [
       {
-        icon: "/img/view.svg",
-        label: `View sheet`,
+        icon: "/img/open-link.svg",
+        label: `Open Link`,
         filter: {
           roles: ["GM", "PLAYER"],
           every: [
             { key: "layer", value: "CHARACTER", coordinator: "||" },
-            { key: "layer", value: "PROPS", coordinator: "||" },
-            { key: "layer", value: "NOTES" },
+            { key: "layer", value: "PROP", coordinator: "||" },
+            { key: "layer", value: "NOTE" },
             {
               key: ["metadata", `${ID}/metadata`],
               value: undefined,
@@ -88,13 +88,13 @@ export function setupContextMenu() {
       },
     ],
     onClick(context, elementId) {
-      const metadata: { characterSheetURL: string } = context.items[0].metadata[
+      const metadata: { owlLinkURL: string } = context.items[0].metadata[
         `${ID}/metadata`
-      ] as { characterSheetURL: string };
+      ] as { owlLinkURL: string };
       if (localStorage.getItem(`${ID}/popoverMode`) === "true") {
         OBR.popover.open({
           id: `${ID}/popover`,
-          url: `${metadata.characterSheetURL}`,
+          url: `${metadata.owlLinkURL}`,
           height: localStorage.getItem(`${ID}/popoverHeight`) as unknown as number,
           width: localStorage.getItem(`${ID}/popoverWidth`) as unknown as number,
           anchorElementId: elementId,
@@ -113,7 +113,7 @@ export function setupContextMenu() {
         const left = Math.max(0, (screenWidth - windowWidth) / 2);
         const top = Math.max(0, (screenHeight - windowHeight) / 2);
         window.open(
-          metadata.characterSheetURL,
+          metadata.owlLinkURL,
           "_blank",
           `left=${left},top=${top},width=${windowWidth},height=${windowHeight}`
         );
