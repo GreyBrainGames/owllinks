@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./components/App";
 import PluginGate from "./components/PluginGate";
 
-export const ID = "es.memorablenaton.sheet-from-beyond";
+export const ID = "gr.greybraingames.owllinks";
 
 const container = document.getElementById("app");
 const root = createRoot(container!);

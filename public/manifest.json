@@ -1,13 +1,13 @@
 {
-  "name": "Sheet from Beyond",
-  "version": "2024-06-10",
+  "name": "Own Links",
+  "version": "0.0.1",
   "manifest_version": 1,
-  "author": "Alvaro Cavalcanti",
+  "author": "GreyBrainGames",
   "icon": "/img/icon-store.svg",
-  "homepage_url": "https://github.com/alvarocavalcanti/sheet-from-beyond",
+  "homepage_url": "https://github.com/GreyBrainGames/owllinks",
   "description": "Add URLs to external character sheets and see them in a popup",
   "action": {
-    "title": "Sheet from Beyond",
+    "title": "Owl Links",
     "icon": "/img/icon.svg",
     "popover": "/",
     "height": 600,

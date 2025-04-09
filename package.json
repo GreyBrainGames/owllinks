@@ -1,7 +1,7 @@
 {
-  "name": "sheet-from-beyond",
+  "name": "owllinks",
   "private": true,
-  "version": "2024-06-10",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -31,6 +31,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "vite": "^6.2.5"
   }
 }

@@ -12,7 +12,9 @@ export function setupContextMenu() {
         filter: {
           roles: ["GM"],
           every: [
-            { key: "layer", value: "CHARACTER" },
+            { key: "layer", value: "CHARACTER", coordinator: "||" },
+            { key: "layer", value: "PROPS", coordinator: "||" },
+            { key: "layer", value: "NOTES" },
             { key: ["metadata", `${ID}/metadata`], value: undefined },
           ],
         },
@@ -22,7 +24,11 @@ export function setupContextMenu() {
         label: "Remove Sheet",
         filter: {
           roles: ["GM"],
-          every: [{ key: "layer", value: "CHARACTER" }],
+          every: [
+            { key: "layer", value: "CHARACTER", coordinator: "||" },
+            { key: "layer", value: "PROPS", coordinator: "||" },
+            { key: "layer", value: "NOTES" },
+          ],
         },
       },
     ],
@@ -69,7 +75,9 @@ export function setupContextMenu() {
         filter: {
           roles: ["GM", "PLAYER"],
           every: [
-            { key: "layer", value: "CHARACTER" },
+            { key: "layer", value: "CHARACTER", coordinator: "||" },
+            { key: "layer", value: "PROPS", coordinator: "||" },
+            { key: "layer", value: "NOTES" },
             {
               key: ["metadata", `${ID}/metadata`],
               value: undefined,
