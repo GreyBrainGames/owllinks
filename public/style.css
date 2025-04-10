@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 2rem;
     font-family: 'Georgia', 'Times New Roman', serif;
-    background-color: #fdf6e3;
-    color: #2b2b2b;
+    background-color: #e0f7ff; /* soft lightblue */
+    color: #1c1e2a; /* dark cool gray for strong contrast */
     background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
     background-repeat: repeat;
     line-height: 1.6;
@@ -13,9 +13,10 @@ body {
 /* === Headings === */
 h1, h2, h3 {
     font-family: 'Georgia', 'Times New Roman', serif;
-    color: #7a1f1f;
-    border-bottom: 2px solid #7a1f1f;
+    color: #443366; /* deep complimentary purple */
+    border-bottom: 2px solid #443366;
     padding-bottom: 0.3rem;
+    text-shadow: 1px 1px 2px rgba(68, 51, 102, 0.4); /* soft shadow */
 }
 
 h1 {
@@ -23,7 +24,6 @@ h1 {
     margin-bottom: 1.2rem;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 15px;
 }
 
@@ -39,10 +39,11 @@ h3 {
 
 /* === Links === */
 a {
-    color: #7a1f1f;
+    color: #336699; /* crisp, readable blue */
     text-decoration: none;
     font-weight: bold;
 }
+
 a:hover {
     text-decoration: underline;
 }
@@ -59,7 +60,8 @@ li {
 /* === Code blocks === */
 code {
     font-family: 'Courier New', monospace;
-    background-color: #eee;
+    background-color: #f3faff; /* soft light blue-gray */
+    color: #1c1e2a;
     padding: 2px 4px;
     border-radius: 4px;
 }
@@ -68,7 +70,7 @@ code {
 img:not(.owl-icon) {
     max-width: 100%;
     height: auto;
-    border: 2px solid #7a1f1f;
+    border: 2px solid #443366;
     border-radius: 8px;
     margin: 1rem 0;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -81,21 +83,22 @@ p, ul, li {
 
 strong {
     font-weight: bold;
-    color: #5b0f0f;
+    color: #995c2d; /* warm golden brown for contrast */
 }
 
 /* === Decorative Box for Demo Section (Optional) === */
 .demo-box {
-    border: 2px solid #7a1f1f;
-    background-color: rgba(255, 245, 200, 0.8);
+    border: 2px solid #443366;
+    background-color: rgba(255, 255, 240, 0.85); /* parchment-like cream */
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
     margin: 2rem 0;
 }
 
+/* === Owl Icon === */
 .owl-icon {
     width: 3rem;
     height: 3rem;
-    /* filter: invert(13%) sepia(52%) saturate(3764%) hue-rotate(347deg) brightness(92%) contrast(93%); */
+    filter: drop-shadow(2px 2px 5px rgba(68, 51, 102, 0.5)); /* subtle glow */
 }

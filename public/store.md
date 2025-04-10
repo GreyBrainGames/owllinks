@@ -23,9 +23,9 @@ Owl Links is an extension for [Owlbear Rodeo](https://owlbear.rodeo) that allows
 - **GM**: Can Add, Remove and Open Links
 - **PLAYER**: Can Open Links. Requires `Character (Update)`, `Prop (Update)` or `Notes (Update)` in `Player Permissions`
 
-## Demo Video
+<!-- ## Demo Video
 
-[![Demo Video](https://img.youtube.com/vi/CS4NznM0qBs/0.jpg)](https://www.youtube.com/embed/-R5FF9-CJ2k?si=wYHj48HS75AbbEE0)
+[![Demo Video](https://img.youtube.com/vi/CS4NznM0qBs/0.jpg)](https://www.youtube.com/embed/-R5FF9-CJ2k?si=wYHj48HS75AbbEE0) -->
 
 ## Features
 
