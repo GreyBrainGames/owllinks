@@ -44,3 +44,8 @@ All the features below are available in the **context menu** for `CHARACTERS`.
 ![View Sheet](public/img/ss_view_sheet.png)
 
 ![Sheet Popover](public/img/ss_sheet_popover.png)
+
+## Credits
+
+This project is forked from [sheet-from-beyond](https://github.com/alvarocavalcanti/sheet-from-beyond) by [alvarocavalcanti](https://github.com/alvarocavalcanti).  
+Modifications made by GreyBrainGames.
