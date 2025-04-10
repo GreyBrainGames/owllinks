@@ -12,7 +12,7 @@ learn-more: https://github.com/GreyBrainGames/owllinks
 
 # Owl Links
 
-![Owl Links](https://github.com/alvarocavalcanti/sheet-from-beyond/raw/main/public/img/hero.png)
+![Owl Links](https://github.com/GreyBrainGames/owllinks/raw/main/public/img/hero.png)
 
 ## Description
 

@@ -1,5 +1,7 @@
 # Owl Links
 
+![Owl Links](https://github.com/GreyBrainGames/owllinks/raw/main/public/img/hero.png)
+
 ## Description
 
 Owl Links is an extension for [Owlbear Rodeo](https://owlbear.rodeo) that allows you to associate a URL to any character, prop or note token, and then to open this URL as a popover window.
