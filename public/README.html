@@ -815,150 +815,40 @@
     </script>
   </head>
   <body for="html-export">
-    <div class="crossnote markdown-preview">
-      <h1 id="sheet-from-beyond">Sheet from Beyond</h1>
-      <p><img src="/img/hero.png" alt="Sheet from Beyond" /></p>
-      <h2 id="description">Description</h2>
-      <p>
-        Sheet from Beyond is an extension for
-        <a href="https://owlbear.rodeo">Owlbear Rodeo</a> that allows you to
-        associate a URL to any given character token, and then to open this URL
-        as a popover window.
-      </p>
-      <h2 id="character-sheet-support">Character Sheet Support</h2>
-      <p>
-        Since Owlbear Rodeo uses an <code>iframe</code> to render the content in
-        the popover window, some sites might block the rendering and you will
-        need to open the sheet in a separate tab. However, when that is the case
-        the popover window will offer the link to open in a new tab.
-      </p>
-      <p>You can see below a support table, last updated June 5th, 2024.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Character Sheet</th>
-            <th>Supported</th>
-            <th>Login Needed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>D&amp;D Beyond</td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>PDF (2)</td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Shard</td>
-            <td>Yes</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Roll20 (1)</td>
-            <td>Yes</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Demiplane</td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td><a href="http://Box.com">Box.com</a> PDF</td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>GDrive PDF</td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Dropbox PDF</td>
-            <td>Yes</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Fantasy Grounds</td>
-            <td>No</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Foundry VTT</td>
-            <td>No</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Alchemy RPG</td>
-            <td>No</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Shadowdarklings</td>
-            <td>No</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <p>
-        If you know of any other VTT or Online Character Sheet service that
-        could be added to the list above, feel free to create a Pull Request.
-      </p>
-      <p>
-        (1)
-        <a href="https://app.roll20.net/forum/post/9585776/character-sheet-url"
-          >How to get the character sheet URL in Roll20</a
-        >. However its availability
-        <strong>depends on your subscription level</strong>.
-      </p>
-      <p>
-        (2) PDF display works fine, however it depends on how your browser
-        handles PDF files. If it doesn't have a native reader, it will probably
-        download the file instead.
-      </p>
-      <h2 id="permissions">Permissions</h2>
-      <ul>
-        <li><strong>GM</strong>: Can Add, Remove and View sheets</li>
+
+    <h1>Owl Links</h1>
+
+    <h2>Description</h2>
+    <p>
+        Owl Links is an extension for <a href="https://owlbear.rodeo">Owlbear Rodeo</a> that allows you to associate a URL to any character, prop or note token, and then to open this URL as a popover window.
+    </p>
+
+    <h2>Permissions</h2>
+    <ul>
         <li>
-          <strong>PLAYER</strong>: Can View sheets. Requires
-          <code>Character (Update)</code> in <code>Player Permissions</code>
+            <strong>GM</strong>: Can Add, Remove and Open Links
         </li>
-      </ul>
-      <h2 id="demo-video">Demo Video</h2>
-      <p>
-        <a href="https://www.youtube.com/embed/-R5FF9-CJ2k?si=wYHj48HS75AbbEE0"
-          ><img
-            src="https://img.youtube.com/vi/CS4NznM0qBs/0.jpg"
-            alt="Demo Video"
-        /></a>
-      </p>
-      <h2 id="features">Features</h2>
-      <p>
-        All the features below are available in the
-        <strong>context menu</strong> for <code>CHARACTERS</code>.
-      </p>
-      <h3 id="add-sheet">Add Sheet</h3>
-      <p><img src="/img/ss_add_sheet.png" alt="Add Sheet" /></p>
-      <h3 id="enter-sheets-url">Enter Sheet's URL</h3>
-      <p><img src="/img/ss_enter_url.png" alt="Enter URL" /></p>
-      <h3 id="view-sheet">View Sheet</h3>
-      <p><img src="/img/ss_view_sheet.png" alt="View Sheet" /></p>
-      <p><img src="/img/ss_sheet_popover.png" alt="Sheet Popover" /></p>
-      <h2 id="buy-me-a-coffee">Buy me a Coffee</h2>
-      <p>
-        <a
-          href="https://www.buymeacoffee.com/alvarocavalcanti"
-          :="true"
-          width="200"
-          ><img
-            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-            alt="Buy Me A Coffee"
-        /></a>
-      </p>
-    </div>
-  </body>
+        <li>
+            <strong>PLAYER</strong>: Can Open Links. Requires <code>Character (Update)</code>, <code>Prop (Update)</code> or <code>Notes (Update)</code> in <code>Player Permissions</code>
+        </li>
+    </ul>
+
+    <h2>Demo Video</h2>
+    <a href="https://www.youtube.com/embed/-R5FF9-CJ2k?si=wYHj48HS75AbbEE0" target="_blank">
+        <img src="https://img.youtube.com/vi/CS4NznM0qBs/0.jpg" alt="Demo Video Thumbnail">
+    </a>
+
+    <h2>Features</h2>
+    <p>All the features below are available in the <strong>context menu</strong> for <code>CHARACTERS</code>.</p>
+
+    <h3>Add Link</h3>
+    <img src="public/img/ss_add_sheet.png" alt="Add Sheet Screenshot">
+
+    <h3>Enter Sheet's URL</h3>
+    <img src="public/img/ss_enter_url.png" alt="Enter URL Screenshot">
+
+    <h3>Open Link</h3>
+    <img src="public/img/ss_view_sheet.png" alt="View Sheet Screenshot">
+    <img src="public/img/ss_sheet_popover.png" alt="Sheet Popover Screenshot">
+</body>
 </html>
