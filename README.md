@@ -15,7 +15,7 @@ Owl Links is an extension for [Owlbear Rodeo](https://owlbear.rodeo) that allows
 
 ## Features
 
-All the features below are available in the **context menu** for `CHARACTERS`.
+All the features below are available in the **context menu** for `CHARACTERS`, `PROPS` or `NOTES`.
 
 ### Add Link
 
