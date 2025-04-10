@@ -2,11 +2,11 @@
 title: Owl Links
 description: Add URLs to character, prop, note tokens and see them in a popup.
 author: GreyBrainGames
-image: https://sheet-from-beyond.vercel.app/img/hero.png
-icon: https://owllinks.pages.dev/img/icon.svg
+image: https://owllinks.greybraingames.com/img/hero.png
+icon: https://owllinks.greybraingames.com/img/icon.svg
 tags:
   - tool
-manifest: https://owllinks.pages.dev/manifest.json
+manifest: https://owllinks.greybraingames.com/manifest.json
 learn-more: https://github.com/GreyBrainGames/owllinks
 ---
 
