@@ -1,0 +1,91 @@
+/* === Base Reset === */
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #fdf6e3;
+    color: #2b2b2b;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-repeat: repeat;
+    line-height: 1.6;
+}
+
+/* === Headings === */
+h1, h2, h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #7a1f1f;
+    border-bottom: 2px solid #7a1f1f;
+    padding-bottom: 0.3rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+/* === Links === */
+a {
+    color: #7a1f1f;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* === Lists === */
+ul {
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* === Code blocks === */
+code {
+    font-family: 'Courier New', monospace;
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* === Images === */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #7a1f1f;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* === Special DnD-style sections === */
+p, ul, li {
+    font-size: 1.1rem;
+}
+
+strong {
+    font-weight: bold;
+    color: #5b0f0f;
+}
+
+/* === Decorative Box for Demo Section (Optional) === */
+.demo-box {
+    border: 2px solid #7a1f1f;
+    background-color: rgba(255, 245, 200, 0.8);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+    margin: 2rem 0;
+}
