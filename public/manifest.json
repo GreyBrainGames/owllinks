@@ -5,7 +5,7 @@
   "author": "GreyBrainGames",
   "icon": "/img/icon-store.svg",
   "homepage_url": "https://github.com/GreyBrainGames/owllinks",
-  "description": "Add URLs to external character sheets and see them in a popup",
+  "description": "Add URLs to any character, prop or note token and see them in a popup",
   "action": {
     "title": "Owl Links",
     "icon": "/img/icon.svg",
